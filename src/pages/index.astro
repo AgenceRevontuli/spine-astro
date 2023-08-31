@@ -52,7 +52,7 @@ import HowSection from '../components/HowSection.tsx';
 				</div>
 			</div>
 		</section>
-		<HowSection />
+		<HowSection client:visible />
 	</main>
 </Layout>
 
@@ -111,6 +111,7 @@ import HowSection from '../components/HowSection.tsx';
 		font-weight: 500;
 		line-height: 1.2;
 		text-align: center;
+		margin-bottom: 2rem;
 	}
 	.text-gradient {
 		background-image: var(--accent-gradient);
