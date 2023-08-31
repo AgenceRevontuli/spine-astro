@@ -4,10 +4,11 @@ interface Props {
 }
 
 const { title } = Astro.props;
+import { Image } from 'astro:assets';
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description">
@@ -15,8 +16,19 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<link rel="stylesheet" href="https://use.typekit.net/uky6khl.css">
 	</head>
 	<body>
+		<nav>
+			<div>
+				<Image src="./spines-logo-marketing-acquisition.svg" alt="Spines logo" width={100} height={100} />
+			</div>
+			<ul>
+				<li><a href="">Nos offres</a></li>
+				<li><a href="">Le studio</a></li>
+				<li><a href="">Nous contacter</a></li>
+			</ul>
+		</nav>
 		<slot />
 	</body>
 </html>
@@ -28,12 +40,50 @@ const { title } = Astro.props;
 		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), rgb(var(--accent-light)) 30%, white 60%);
 	}
 	html {
-		font-family: system-ui, sans-serif;
+		font-family: "obviously", sans-serif;
 		background: #13151A;
 		background-size: 224px;
 	}
 	code {
 		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
 			Bitstream Vera Sans Mono, Courier New, monospace;
+	}
+	nav {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;	
+		padding: 0 14%;
+	}
+	button {
+		background: #fff;
+		font-family: "obviously", sans-serif;
+		color: #13151A;
+		border: none;
+		border-radius: 4px;
+		padding: 1rem 1.5rem;
+		font-size: 1.1rem;
+		display: flex;
+		font-weight: 500;
+		align-items: center;
+		cursor: pointer;
+	}
+	button.secondary {
+		background: transparent;
+		color: white;
+		border-bottom: 3px solid white;
+		border-radius: 0;
+		padding: 1rem 0;
+	}
+	ul {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+	}
+	li {
+		list-style: none;
+	}
+	li a {
+		text-decoration: none;
+		color: white;
 	}
 </style>
