@@ -2,9 +2,11 @@
 import Layout from '../layouts/Layout.astro';
 import { Image } from 'astro:assets';
 import Google from '../../public/logoclients/google.svg';
+import FadeText from '../components/FadeText.tsx';
+import HowSection from '../components/HowSection.tsx';
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Spines">
 	<main>
 		<header>
 			<h1>Performez votre stratégie d'acquisition sur le web</h1>
@@ -29,10 +31,28 @@ import Google from '../../public/logoclients/google.svg';
 			</div>
 		</header>
 		<section>
-			<div>
-				
+			<div class="text-hero">
+				<p><span>Vous n'avez pas besoin de nous si ...</span></p>
+				<FadeText text="vos objectifs sont parfaitement définis, votre stratégie d'acquisition est testée et optimisée, vous pilotez toutes vos actions marketing et vos processus de prospection et de fidélisation sont automatisées." client:visible />
+			</div>
+			<div class="advantages-hero">
+				<p>Sinon, notre offre Performance Marketing vous permet de :</p>
+				<div>
+					<ul>
+						<li>Définir une stratégie d'acquisition solide</li>
+						<li>Faire x6 sur vos marges</li>
+						<li>Trouver des nouvelles opportunités</li>
+						<li>Tester votre marché</li>
+						<li>Gagner du temps</li>
+						<li>Fidéliser vos clients et développer votre notoriété</li>
+						<li>Avoir une roadmap clair</li>
+						<li>Piloter vos data</li>
+						<li>automatiser vos tâches chronophages</li>
+					</ul>
+				</div>
 			</div>
 		</section>
+		<HowSection />
 	</main>
 </Layout>
 
@@ -122,5 +142,30 @@ import Google from '../../public/logoclients/google.svg';
 		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
 		gap: 2rem;
 		padding: 0;
+	}
+	.text-hero {
+		margin: 10rem 0;
+	}
+	.text-hero p {
+		font-size: 1.8rem;
+	}
+	.advantages-hero {
+		margin: 10rem 0;
+	}
+	.advantages-hero p {
+		font-size: 1.8rem;
+	}
+	.advantages-hero ul {
+		display: flex;
+		flex-wrap: wrap;
+		padding: 0;
+		margin-top: 40px;
+	}
+	.advantages-hero li {
+		font-size: 1.4rem;
+		background-color: #efffb6;
+		color: #252832;
+		padding: 5px 15px;
+		border-radius: 50px;
 	}
 </style>
