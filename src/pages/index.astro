@@ -1,0 +1,126 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import Google from '../../public/logoclients/google.svg';
+---
+
+<Layout title="Welcome to Astro.">
+	<main>
+		<header>
+			<h1>Performez votre stratégie d'acquisition sur le web</h1>
+			<p class="subtitle-header">Nos experts vous aide à développer votre utilisation des outils digitaux pour faire x6 sur votre marge.</p>
+			<div class="cta-header">
+				<button>On travaille ensemble</button>
+				<button class="secondary">Notre méthode</button>
+			</div>
+			<div>
+				<div class="customer-header">
+					<div>
+						<p><span>Déjà +40 clients accompagnés par Spines</span></p>
+					</div>
+					<div class="logos">
+						<Image src={Google} height={80} width={80} alt="Logo client Google" />
+						<Image src={"./logoclients/psynyou.svg"} height={80} width={80} alt="Logo client Google" />
+						<Image src={"./logoclients/esa.svg"} height={80} width={80} alt="Logo client Google" />
+						<Image src={"./logoclients/aircall.svg"} height={100} width={100} alt="Logo client Google" />
+						<Image src={"./logoclients/ritmo.svg"} height={120} width={120} alt="Logo client Google" />
+					</div>
+				</div>
+			</div>
+		</header>
+		<section>
+			<div>
+				
+			</div>
+		</section>
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 1200px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	header{
+		text-align: center;
+		height: calc(100vh - 200px);
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.subtitle-header {
+		font-size: 1.6rem;
+		max-width: 800px;
+		margin: 0 auto;
+	}
+	.customer-header {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 1rem;
+		font-size: 1rem;
+		margin: 50px auto 0 auto;
+		padding: 0px 20px;
+		max-width: 850px;
+		border-radius: 25px;
+		background-color: #252832;
+	}
+	.customer-header span {
+		display: block;
+		text-align: left;
+		max-width: 200px;
+	}
+	.logos {
+		display: flex;
+		gap: 30px;
+		align-items: center;
+	}
+	.cta-header {
+		display: flex;
+		justify-content: center;
+		margin-top: 2rem;
+		gap: 2rem;
+	}
+	h1 {
+		font-size: 5rem;
+		font-weight: 500;
+		line-height: 1.2;
+		text-align: center;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.instructions {
+		margin-bottom: 2rem;
+		border: 1px solid rgba(var(--accent-light), 25%);
+		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
+		padding: 1.5rem;
+		border-radius: 8px;
+	}
+	.instructions code {
+		font-size: 0.8em;
+		font-weight: bold;
+		background: rgba(var(--accent-light), 12%);
+		color: rgb(var(--accent-light));
+		border-radius: 4px;
+		padding: 0.3em 0.4em;
+	}
+	.instructions strong {
+		color: rgb(var(--accent-light));
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 2rem;
+		padding: 0;
+	}
+</style>
