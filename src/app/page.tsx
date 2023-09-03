@@ -3,10 +3,7 @@ import FormPost from "./Component/FormPost"
 export default function Home() {
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-        <div>
-          <h1 className="text-8xl">SuperPost</h1>
-        </div>
+    <main className="flex flex-col items-center justify-between px-32 py-8 bg-slate-100">
         <FormPost />
     </main>
   )
